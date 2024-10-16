@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/lastgregslist:latest
+    restart: unless-stopped
+    env_file:
+      - lastgregslist-env
+    ports:
+      - "7045:80"
