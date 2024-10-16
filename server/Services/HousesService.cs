@@ -1,3 +1,5 @@
+
+
 namespace lastgregslist.Services;
 
 public class HousesService
@@ -9,5 +11,16 @@ public class HousesService
 
   private readonly HousesRepository _repository;
 
+  internal List<House> getHouses()
+  {
+    List<House> houses = _repository.getHouses();
+    return houses;
+  }
+
+  internal House createHouse(House houseData)
+  {
+    House house = _repository.createHouse(houseData);
+    return house;
+  }
 }
 

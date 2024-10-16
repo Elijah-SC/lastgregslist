@@ -9,12 +9,12 @@ CREATE TABLE IF NOT EXISTS accounts (
 
 CREATE TABLE houses (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    sqft INT NOT NULL,
-    bedrooms INT NOT NULL,
-    bathrooms DOUBLE NOT NULL,
+    sqft INT UNSIGNED NOT NULL,
+    bedrooms INT UNSIGNED NOT NULL,
+    bathrooms DOUBLE UNSIGNED NOT NULL,
     imgUrl VARCHAR(255) NOT NULL,
-    description VARCHAR(255) NOT NULL,
-    price INT NOT NULL,
+    description VARCHAR(255),
+    price INT UNSIGNED NOT NULL,
     location ENUM(
         'Urban',
         'Rural',
@@ -42,12 +42,12 @@ INSERT INTO
         creatorId
     )
 Values (
-        '20000',
-        '3',
-        '2',
+        200000,
+        3,
+        2,
         'https://images.unsplash.com/photo-1535989983313-dc5d0d9d1d4f?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'Nice House in the Woods great for vacations',
-        1000000,
+        'Super Nice House',
+        100000000,
         'Wilderness',
         '66e04bf70483818f681bcaa1'
     )
